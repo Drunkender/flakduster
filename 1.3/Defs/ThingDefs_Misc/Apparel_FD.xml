@@ -32,7 +32,7 @@
       <li>Leathery</li>
     </stuffCategories>
     <thingCategories>
-      <li>Apparel</li>
+      <li>ApparelArmor</li>
     </thingCategories>
     <statBases>
       <MaxHitPoints>260</MaxHitPoints>
@@ -59,7 +59,6 @@
         <li>Shoulders</li>
         <li>Arms</li>
         <li>Legs</li>
-        <li>Hands</li>
       </bodyPartGroups>
       <wornGraphicPath>Things/Pawn/Humanlike/Apparel/FlakDuster/FlakDuster</wornGraphicPath>
       <layers>
