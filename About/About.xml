@@ -18,6 +18,7 @@
 		<li>anthitei.athsstylableframework.style</li>
         <li>anthitei.athsstylegothic.style</li>
         <li>Anthitei.ATHsStyleDraconic.Style</li>
+        <li>anthitei.athsstylenorse.style</li>
 	</loadAfter>
     <packageId>VerriganHolmes.FlakDusters</packageId>
     <description>Gives you the style of a duster and the protection of a flak jacket!
