@@ -10,7 +10,16 @@
         <li>1.4</li>
         <li>1.5</li>
     </supportedVersions>
+    <loadAfter>
+		<li>Ludeon.RimWorld</li>
+		<li>Ludeon.RimWorld.Royalty</li>
+		<li>Ludeon.RimWorld.Ideology</li>
+		<li>Ludeon.RimWorld.Biotech</li>
+		<li>anthitei.athsstylableframework.style</li>
+        <li>anthitei.athsstylegothic.style</li>
+        <li>Anthitei.ATHsStyleDraconic.Style</li>
+	</loadAfter>
     <packageId>VerriganHolmes.FlakDusters</packageId>
     <description>Gives you the style of a duster and the protection of a flak jacket!
-    </description>
+	</description>
 </ModMetaData>
