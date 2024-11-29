@@ -2,21 +2,6 @@
 <Patch>
     <Operation Class="PatchOperationFindMod">
         <mods>
-            <li>ATH's style Draconic</li>
-        </mods>
-        <match Class="PatchOperationAdd">
-                <xpath>Defs/StyleCategoryDef[defName="Draconic"]/thingDefStyles</xpath>
-                <value>
-                    <li>
-                        <thingDef MayRequire="Ludeon.RimWorld.Ideology">Apparel_FlakDuster</thingDef>
-                        <styleDef MayRequire="Ludeon.RimWorld.Ideology">Draconic_Duster</styleDef>
-                    </li>
-                </value>
-        </match>
-    </Operation>
-
-    <Operation Class="PatchOperationFindMod">
-        <mods>
             <li>ATH's style Gothic and Bloody Gothic</li>
         </mods>
         <match Class="PatchOperationAdd">
