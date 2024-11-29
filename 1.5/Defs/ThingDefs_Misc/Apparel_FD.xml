@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-
   <ThingDef ParentName="ArmorMachineableBase">
     <defName>Apparel_FlakDuster</defName>
     <description>A tough fabric duster with armor plates sewn in. While it's not as good as solid
