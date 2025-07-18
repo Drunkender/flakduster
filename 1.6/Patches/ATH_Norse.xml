@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>ATH's styles Norse</li>
+        </mods>
+        <match Class="PatchOperationAdd">
+                <xpath>Defs/StyleCategoryDef[defName="Norse"]/thingDefStyles</xpath>
+                <value>
+                    <li>
+                        <thingDef MayRequire="Ludeon.RimWorld.Ideology">Apparel_FlakDuster</thingDef>
+                        <styleDef MayRequire="Ludeon.RimWorld.Ideology">Norse_Duster</styleDef>
+                    </li>
+                </value>
+        </match>
+    </Operation>
+
+</Patch>
