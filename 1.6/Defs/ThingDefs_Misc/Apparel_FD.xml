@@ -2,8 +2,9 @@
 <Defs>
   <ThingDef ParentName="ArmorMachineableBase">
     <defName>Apparel_FlakDuster</defName>
-    <description>A tough fabric duster with armor plates sewn in. While it's not as good as solid armor, it offers effective protection against all manner of attacks while remaining quite comfortable and fashionable.</description>
-    <label>flak duster</label>
+    <!-- Combines a flak jacket's protection with a duster's coverage and style. -->
+    <descriptionKey>Apparel_FlakDuster.description</descriptionKey>
+    <labelKey>Apparel_FlakDuster.label</labelKey>
     <recipeMaker>
       <researchPrerequisite>FlakArmor</researchPrerequisite>
       <unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
@@ -35,9 +36,12 @@
     </thingCategories>
     <statBases>
       <MaxHitPoints>260</MaxHitPoints>
+      <!-- Similar work to a flak jacket plus a duster combined. -->
       <WorkToMake>14000</WorkToMake>
+      <!-- Heavier than a regular duster due to armor plates. -->
       <Mass>6.5</Mass>
       <Flammability>0.6</Flammability>
+      <!-- Strong sharp protection for a shell-layer coat. -->
       <ArmorRating_Sharp>0.55</ArmorRating_Sharp>
       <ArmorRating_Blunt>0.08</ArmorRating_Blunt>
       <ArmorRating_Heat>0.10</ArmorRating_Heat>
@@ -49,6 +53,7 @@
       <EquipDelay>3</EquipDelay>
     </statBases>
     <equippedStatOffsets>
+      <!-- Slight movement penalty from the added weight of armor plating. -->
       <MoveSpeed>-0.04</MoveSpeed>
     </equippedStatOffsets>
     <apparel>

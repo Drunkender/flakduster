@@ -22,6 +22,10 @@
         <li>anthitei.athsstylenorse.style</li>
 	</loadAfter>
     <packageId>VerriganHolmes.FlakDusters</packageId>
-    <description>Gives you the style of a duster and the protection of a flak jacket!
+    <url>https://github.com/Drunkender/flakduster</url>
+    <description>
+        Adds a flak duster that combines the protection of flak armor with the coverage and style of a long coat.
+        Includes updated textures based on "Retextured Apparel" and optional integration with Anthitei's style framework
+        and style packs when those mods are loaded. Supports RimWorld versions 1.0 through 1.6.
 	</description>
 </ModMetaData>
