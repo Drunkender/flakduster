@@ -13,9 +13,6 @@
     </supportedVersions>
     <loadAfter>
 		<li>Ludeon.RimWorld</li>
-		<li>Ludeon.RimWorld.Royalty</li>
-		<li>Ludeon.RimWorld.Ideology</li>
-		<li>Ludeon.RimWorld.Biotech</li>
 		<li>anthitei.athsstylableframework.style</li>
         <li>anthitei.athsstylegothic.style</li>
         <li>Anthitei.ATHsStyleDraconic.Style</li>

@@ -3,8 +3,8 @@
   <ThingDef ParentName="ArmorMachineableBase">
     <defName>Apparel_FlakDuster</defName>
     <!-- Combines a flak jacket's protection with a duster's coverage and style. -->
-    <descriptionKey>Apparel_FlakDuster.description</descriptionKey>
-    <labelKey>Apparel_FlakDuster.label</labelKey>
+    <label>flak duster</label>
+    <description>A tough duster reinforced with armor plates. While it's not as strong as full heavy armor, it offers reliable protection against many kinds of attacks while remaining relatively comfortable and fashionable.</description>
     <recipeMaker>
       <researchPrerequisite>FlakArmor</researchPrerequisite>
       <unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
@@ -21,12 +21,19 @@
       <drawSize>1.05</drawSize>
     </graphicData>
     <techLevel>Industrial</techLevel>
-    <tradeability>Sellable</tradeability>
+    <tradeability>All</tradeability>
+    <tradeTags>
+      <li>Armor</li>
+    </tradeTags>
     <costList>
       <Steel>70</Steel>
       <ComponentIndustrial>1</ComponentIndustrial>
     </costList>
     <costStuffCount>80</costStuffCount>
+    <smeltProducts>
+      <Steel>35</Steel>
+      <ComponentIndustrial>1</ComponentIndustrial>
+    </smeltProducts>
     <stuffCategories>
       <li>Fabric</li>
       <li>Leathery</li>
@@ -73,6 +80,7 @@
       </tags>
       <defaultOutfitTags>
         <li>Soldier</li>
+        <li>Worker</li>
       </defaultOutfitTags>
     </apparel>
     <colorGenerator Class="ColorGenerator_Options">

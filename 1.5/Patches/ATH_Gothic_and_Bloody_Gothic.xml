@@ -4,14 +4,17 @@
         <mods>
             <li>ATH's style Gothic and Bloody Gothic</li>
         </mods>
-        <match Class="PatchOperationAdd">
-                <xpath>Defs/StyleCategoryDef[defName="Gothic"]/thingDefStyles</xpath>
-                <value>
-                    <li>
-                        <thingDef MayRequire="Ludeon.RimWorld.Ideology">Apparel_FlakDuster</thingDef>
-                        <styleDef MayRequire="Ludeon.RimWorld.Ideology">Gothic_Duster</styleDef>
-                    </li>
-                </value>
+        <match Class="PatchOperationConditional">
+            <xpath>Defs/StyleCategoryDef[defName="Gothic"]</xpath>
+            <match Class="PatchOperationAdd">
+                    <xpath>Defs/StyleCategoryDef[defName="Gothic"]/thingDefStyles</xpath>
+                    <value>
+                        <li>
+                            <thingDef MayRequire="Ludeon.RimWorld.Ideology">Apparel_FlakDuster</thingDef>
+                            <styleDef MayRequire="Ludeon.RimWorld.Ideology">Gothic_Duster</styleDef>
+                        </li>
+                    </value>
+            </match>
         </match>
     </Operation>
 
@@ -19,14 +22,17 @@
         <mods>
             <li>ATH's style Gothic and Bloody Gothic</li>
         </mods>
-        <match Class="PatchOperationAdd">
-                <xpath>Defs/StyleCategoryDef[defName="BloodyGothic"]/thingDefStyles</xpath>
-                <value>
-                    <li>
-                        <thingDef MayRequire="Ludeon.RimWorld.Ideology">Apparel_FlakDuster</thingDef>
-                        <styleDef MayRequire="Ludeon.RimWorld.Ideology">BloodyGothic_Duster</styleDef>
-                    </li>
-                </value>
+        <match Class="PatchOperationConditional">
+            <xpath>Defs/StyleCategoryDef[defName="BloodyGothic"]</xpath>
+            <match Class="PatchOperationAdd">
+                    <xpath>Defs/StyleCategoryDef[defName="BloodyGothic"]/thingDefStyles</xpath>
+                    <value>
+                        <li>
+                            <thingDef MayRequire="Ludeon.RimWorld.Ideology">Apparel_FlakDuster</thingDef>
+                            <styleDef MayRequire="Ludeon.RimWorld.Ideology">BloodyGothic_Duster</styleDef>
+                        </li>
+                    </value>
+            </match>
         </match>
     </Operation>
 </Patch>

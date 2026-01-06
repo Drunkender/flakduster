@@ -4,14 +4,17 @@
         <mods>
             <li>ATH's styles Norse</li>
         </mods>
-        <match Class="PatchOperationAdd">
-                <xpath>Defs/StyleCategoryDef[defName="Norse"]/thingDefStyles</xpath>
-                <value>
-                    <li>
-                        <thingDef MayRequire="Ludeon.RimWorld.Ideology">Apparel_FlakDuster</thingDef>
-                        <styleDef MayRequire="Ludeon.RimWorld.Ideology">Norse_Duster</styleDef>
-                    </li>
-                </value>
+        <match Class="PatchOperationConditional">
+            <xpath>Defs/StyleCategoryDef[defName="Norse"]</xpath>
+            <match Class="PatchOperationAdd">
+                    <xpath>Defs/StyleCategoryDef[defName="Norse"]/thingDefStyles</xpath>
+                    <value>
+                        <li>
+                            <thingDef MayRequire="Ludeon.RimWorld.Ideology">Apparel_FlakDuster</thingDef>
+                            <styleDef MayRequire="Ludeon.RimWorld.Ideology">Norse_Duster</styleDef>
+                        </li>
+                    </value>
+            </match>
         </match>
     </Operation>
 

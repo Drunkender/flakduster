@@ -4,14 +4,17 @@
         <mods>
             <li>ATH's style Draconic</li>
         </mods>
-        <match Class="PatchOperationAdd">
-            <xpath>Defs/StyleCategoryDef[defName="Draconic"]/thingDefStyles</xpath>
-            <value>
-                <li>
-                    <thingDef MayRequire="Ludeon.RimWorld.Ideology">Apparel_FlakDuster</thingDef>
-                    <styleDef MayRequire="Ludeon.RimWorld.Ideology">Draconic_Duster</styleDef>
-                </li>
-            </value>
+        <match Class="PatchOperationConditional">
+            <xpath>Defs/StyleCategoryDef[defName="Draconic"]</xpath>
+            <match Class="PatchOperationAdd">
+                <xpath>Defs/StyleCategoryDef[defName="Draconic"]/thingDefStyles</xpath>
+                <value>
+                    <li>
+                        <thingDef MayRequire="Ludeon.RimWorld.Ideology">Apparel_FlakDuster</thingDef>
+                        <styleDef MayRequire="Ludeon.RimWorld.Ideology">Draconic_Duster</styleDef>
+                    </li>
+                </value>
+            </match>
         </match>
     </Operation>
 </Patch>
