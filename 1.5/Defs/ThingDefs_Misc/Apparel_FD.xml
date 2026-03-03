@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-  <ThingDef ParentName="ArmorMachineableBase">
+  <ThingDef ParentName="Apparel_FlakDusterBase">
     <defName>Apparel_FlakDuster</defName>
     <!-- Combines a flak jacket's protection with a duster's coverage and style. -->
     <label>flak duster</label>

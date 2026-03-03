@@ -9,6 +9,7 @@
     </supportedVersions>
     <loadAfter>
 		<li>Ludeon.RimWorld</li>
+		<li>CETeam.CombatExtended</li>
 		<li>anthitei.athsstylableframework.style</li>
         <li>anthitei.athsstylegothic.style</li>
         <li>Anthitei.ATHsStyleDraconic.Style</li>

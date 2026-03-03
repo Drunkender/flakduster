@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Combat Extended Compatibility Patch for Flak Dusters
+    
+    Adds CE-specific stats to the Flak Duster apparel:
+    - Bulk: Inventory space when carried (based on CE flak jacket ~10 + duster coverage)
+    - WornBulk: Inventory space when worn (shell layer, similar to flak jacket)
+    - Armor values adjusted for CE's penetration system
+    
+    Reference: CE Flak Jacket (Bulk: 10, WornBulk: 3)
+    The Flak Duster covers more body parts (legs, arms) so slightly higher values.
+    
+    Tested with: Combat Extended 16.7+, RimWorld 1.5/1.6
+-->
+<Patch>
+    <Operation Class="PatchOperationSequence">
+        <operations>
+            <!-- Add Bulk stat for inventory space when carried -->
+            <li Class="PatchOperationConditional">
+                <xpath>Defs/ThingDef[defName="Apparel_FlakDuster"]/statBases/Bulk</xpath>
+                <match Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="Apparel_FlakDuster"]/statBases/Bulk</xpath>
+                    <value>
+                        <Bulk>12</Bulk>
+                    </value>
+                </match>
+                <nomatch Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName="Apparel_FlakDuster"]/statBases</xpath>
+                    <value>
+                        <Bulk>12</Bulk>
+                    </value>
+                </nomatch>
+            </li>
+            <li Class="PatchOperationConditional">
+                <xpath>Defs/ThingDef[defName="Apparel_FlakDuster"]/statBases/WornBulk</xpath>
+                <match Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="Apparel_FlakDuster"]/statBases/WornBulk</xpath>
+                    <value>
+                        <WornBulk>4</WornBulk>
+                    </value>
+                </match>
+                <nomatch Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName="Apparel_FlakDuster"]/statBases</xpath>
+                    <value>
+                        <WornBulk>4</WornBulk>
+                    </value>
+                </nomatch>
+            </li>
+            
+            <!-- 
+                CE uses different armor rating scales than vanilla.
+                Vanilla ArmorRating_Sharp of 0.55 translates roughly to CE's layered system.
+                For a flak duster (industrial armor + fabric/leather):
+                - Sharp: ~5mm RHA equivalent (light armor plating)
+                - Blunt: ~8mm RHA equivalent (padding helps with blunt)
+                - Heat: slight improvement from layered construction
+                
+                These values are set to work alongside CE's armor penetration calculations.
+                The stuff multipliers remain vanilla-compatible.
+            -->
+            <li Class="PatchOperationConditional">
+                <xpath>Defs/ThingDef[defName="Apparel_FlakDuster"]/statBases/ArmorRating_Sharp</xpath>
+                <match Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="Apparel_FlakDuster"]/statBases/ArmorRating_Sharp</xpath>
+                    <value>
+                        <ArmorRating_Sharp>5</ArmorRating_Sharp>
+                    </value>
+                </match>
+                <nomatch Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName="Apparel_FlakDuster"]/statBases</xpath>
+                    <value>
+                        <ArmorRating_Sharp>5</ArmorRating_Sharp>
+                    </value>
+                </nomatch>
+            </li>
+            <li Class="PatchOperationConditional">
+                <xpath>Defs/ThingDef[defName="Apparel_FlakDuster"]/statBases/ArmorRating_Blunt</xpath>
+                <match Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="Apparel_FlakDuster"]/statBases/ArmorRating_Blunt</xpath>
+                    <value>
+                        <ArmorRating_Blunt>8</ArmorRating_Blunt>
+                    </value>
+                </match>
+                <nomatch Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName="Apparel_FlakDuster"]/statBases</xpath>
+                    <value>
+                        <ArmorRating_Blunt>8</ArmorRating_Blunt>
+                    </value>
+                </nomatch>
+            </li>
+            <li Class="PatchOperationConditional">
+                <xpath>Defs/ThingDef[defName="Apparel_FlakDuster"]/statBases/ArmorRating_Heat</xpath>
+                <match Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="Apparel_FlakDuster"]/statBases/ArmorRating_Heat</xpath>
+                    <value>
+                        <ArmorRating_Heat>0.15</ArmorRating_Heat>
+                    </value>
+                </match>
+                <nomatch Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName="Apparel_FlakDuster"]/statBases</xpath>
+                    <value>
+                        <ArmorRating_Heat>0.15</ArmorRating_Heat>
+                    </value>
+                </nomatch>
+            </li>
+        </operations>
+    </Operation>
+</Patch>

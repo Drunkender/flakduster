@@ -1,0 +1,46 @@
+# RimWorld Mod .gitignore
+
+AGENTS.md
+
+# Build outputs
+bin/
+obj/
+*.dll
+*.pdb
+*.exe
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.cache
+
+# Rider / JetBrains
+.idea/
+*.iml
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# AI assistant config
+CLAUDE.md
+AGENTS.md
+
+# OS files
+Thumbs.db
+.DS_Store
+$RECYCLE.BIN/
+.AppleDouble
+.LSOverride
+
+# Temporary / backup files
+*.tmp
+*.temp
+*.bak
+*.backup
+*.log
+*~
+.#*
+*.lnk
+AGENTS.md
