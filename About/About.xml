@@ -6,6 +6,7 @@
         <li>1.4</li>
         <li>1.5</li>
         <li>1.6</li>
+        <li>1.7</li>
     </supportedVersions>
     <loadAfter>
 		<li>Ludeon.RimWorld</li>
@@ -20,6 +21,6 @@
     <description>
         Adds a flak duster that combines the protection of flak armor with the coverage and style of a long coat.
         Includes updated textures based on "Retextured Apparel" and optional integration with Anthitei's style framework
-        and style packs when those mods are loaded. Supports RimWorld versions 1.4 through 1.6.
+        and style packs when those mods are loaded. Supports RimWorld versions 1.4 through 1.7.
 	</description>
 </ModMetaData>

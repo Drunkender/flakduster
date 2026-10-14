@@ -2,17 +2,24 @@
 <loadFolders>
     <v1.4>
         <li>/</li>
-        <li>1.4</li>
+        <li>Common</li>
+        <li>Legacy</li>
         <li IfModActive="CETeam.CombatExtended">CE</li>
     </v1.4>
     <v1.5>
         <li>/</li>
-        <li>1.5</li>
+        <li>Common</li>
+        <li>Legacy</li>
         <li IfModActive="CETeam.CombatExtended">CE</li>
     </v1.5>
     <v1.6>
         <li>/</li>
-        <li>1.6</li>
+        <li>Common</li>
         <li IfModActive="CETeam.CombatExtended">CE</li>
     </v1.6>
+    <v1.7>
+        <li>/</li>
+        <li>Common</li>
+        <li IfModActive="CETeam.CombatExtended">CE</li>
+    </v1.7>
 </loadFolders>

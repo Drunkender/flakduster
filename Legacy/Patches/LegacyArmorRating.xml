@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <!-- Pre-1.6 vanilla flak jackets used ArmorRating_Sharp 0.40. The mod tracks
+         vanilla parity per version, so downgrade the shared Common def on 1.4/1.5.
+         Loaded before the CE folder so CE's armor overwrite still wins under CE. -->
+    <Operation Class="PatchOperationSequence">
+        <operations>
+            <li Class="PatchOperationConditional">
+                <xpath>Defs/ThingDef[defName="Apparel_FlakDuster"]/statBases/ArmorRating_Sharp</xpath>
+                <match Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="Apparel_FlakDuster"]/statBases/ArmorRating_Sharp</xpath>
+                    <value>
+                        <ArmorRating_Sharp>0.40</ArmorRating_Sharp>
+                    </value>
+                </match>
+            </li>
+        </operations>
+    </Operation>
+</Patch>

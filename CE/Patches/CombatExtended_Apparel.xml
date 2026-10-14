@@ -10,7 +10,7 @@
     Reference: CE Flak Jacket (Bulk: 10, WornBulk: 3)
     The Flak Duster covers more body parts (legs, arms) so slightly higher values.
     
-    Tested with: Combat Extended 16.7+, RimWorld 1.5/1.6
+    Tested with: Combat Extended 16.7+, RimWorld 1.5-1.7
 -->
 <Patch>
     <Operation Class="PatchOperationSequence">
