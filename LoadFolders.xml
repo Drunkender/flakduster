@@ -1,25 +1,37 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- Style patches are split by XML Extensions availability:
+     - StylesXmlExtensions: one auto-patcher covering every duster style from every mod (needs XML Extensions).
+     - StylesManual: hand-written per-mod fallback patches, loaded only when XML Extensions is absent so the two
+       sets never both add flak duster entries. -->
 <loadFolders>
     <v1.4>
         <li>/</li>
         <li>Common</li>
         <li>Legacy</li>
+        <li IfModActive="imranfish.xmlextensions">StylesXmlExtensions</li>
+        <li IfModNotActive="imranfish.xmlextensions">StylesManual</li>
         <li IfModActive="CETeam.CombatExtended">CE</li>
     </v1.4>
     <v1.5>
         <li>/</li>
         <li>Common</li>
         <li>Legacy</li>
+        <li IfModActive="imranfish.xmlextensions">StylesXmlExtensions</li>
+        <li IfModNotActive="imranfish.xmlextensions">StylesManual</li>
         <li IfModActive="CETeam.CombatExtended">CE</li>
     </v1.5>
     <v1.6>
         <li>/</li>
         <li>Common</li>
+        <li IfModActive="imranfish.xmlextensions">StylesXmlExtensions</li>
+        <li IfModNotActive="imranfish.xmlextensions">StylesManual</li>
         <li IfModActive="CETeam.CombatExtended">CE</li>
     </v1.6>
     <v1.7>
         <li>/</li>
         <li>Common</li>
+        <li IfModActive="imranfish.xmlextensions">StylesXmlExtensions</li>
+        <li IfModNotActive="imranfish.xmlextensions">StylesManual</li>
         <li IfModActive="CETeam.CombatExtended">CE</li>
     </v1.7>
 </loadFolders>

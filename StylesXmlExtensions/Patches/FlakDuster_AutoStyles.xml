@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Auto-patcher: gives the flak duster every style any loaded StyleCategoryDef defines for the vanilla duster.
+     Only loaded when XML Extensions (imranfish.xmlextensions) is active (see LoadFolders.xml); otherwise the
+     hand-written per-mod patches in StylesManual/ are used instead. The flak duster shares the duster's body
+     coverage and silhouette, so the duster style graphics fit it without any separate art. -->
+<Patch>
+    <!-- Bail out early when no category styles Apparel_Duster (e.g. Ideology not active), so ForEach never
+         runs against an empty match set and never logs a failed-xpath error. -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/StyleCategoryDef/thingDefStyles/li[thingDef="Apparel_Duster"]</xpath>
+        <!-- Loop over each category containing a duster style. prefixLength defaults to 2, so {CAT} holds the
+             indexed path of the current def, e.g. "Defs/StyleCategoryDef[12]". -->
+        <match Class="XmlExtensions.ForEach">
+            <xpath>Defs/StyleCategoryDef[thingDefStyles/li[thingDef="Apparel_Duster"]]</xpath>
+            <storeIn>CAT</storeIn>
+            <apply>
+                <!-- Skip categories that already style the flak duster (e.g. another mod added it explicitly);
+                     a second ThingDefStyle entry for the same thingDef would be a duplicate. -->
+                <Operation Class="PatchOperationConditional">
+                    <xpath>{CAT}/thingDefStyles/li[thingDef="Apparel_FlakDuster"]</xpath>
+                    <!-- fromXml=true stores the node's text (the styleDef name) rather than its xpath. -->
+                    <nomatch Class="XmlExtensions.CreateVariable">
+                        <storeIn>DUSTERSTYLE</storeIn>
+                        <value>{CAT}/thingDefStyles/li[thingDef="Apparel_Duster"]/styleDef</value>
+                        <fromXml>true</fromXml>
+                        <apply>
+                            <Operation Class="PatchOperationAdd">
+                                <xpath>{CAT}/thingDefStyles</xpath>
+                                <value>
+                                    <li>
+                                        <thingDef>Apparel_FlakDuster</thingDef>
+                                        <styleDef>{DUSTERSTYLE}</styleDef>
+                                    </li>
+                                </value>
+                            </Operation>
+                        </apply>
+                    </nomatch>
+                </Operation>
+            </apply>
+        </match>
+    </Operation>
+</Patch>

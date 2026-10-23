@@ -11,6 +11,7 @@
     <loadAfter>
 		<li>Ludeon.RimWorld</li>
 		<li>CETeam.CombatExtended</li>
+		<li>imranfish.xmlextensions</li>
 		<li>anthitei.athsstylableframework.style</li>
         <li>anthitei.athsstylegothic.style</li>
         <li>Anthitei.ATHsStyleDraconic.Style</li>
