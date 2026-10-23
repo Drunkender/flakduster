@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.2
+- Added optional XML Extensions auto-patcher (`StylesXmlExtensions/`) that gives the Flak Duster every duster style from every loaded mod.
+- Moved per-mod style patches to `StylesManual/`; they now load only when XML Extensions is not active.
+
 ## 1.1
 - Added RimWorld 1.7 support.
 - Consolidated shared defs and patches into `Common/`, loaded by all versions via `LoadFolders.xml`.
