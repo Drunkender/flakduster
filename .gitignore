@@ -49,3 +49,6 @@ desktop.ini
 *~
 .#*
 *.lnk
+
+# DDS textures are build artifacts generated from PNG sources.
+*.dds
